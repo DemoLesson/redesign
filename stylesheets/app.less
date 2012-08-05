@@ -15,8 +15,12 @@ div.video {
 	background: #FFF url(../images/video-faded.jpg) no-repeat center center;
 }
 div.profile {
-	padding:20px;
+	padding:0px 20px;
 	color:#808080;
+	.columns {
+		margin-top:20px;
+		margin-bottom:20px;
+	}
 	h3 {
 		font-weight:200;
 		font-size:1.6em;
@@ -29,6 +33,30 @@ div.profile {
 	div.badge {
 		float:left;
 		margin:0px 10px 0px 0px;
+	}
+}
+div.skill-select {
+	h2 {
+		font-weight: 200;
+		margin: 0px;
+		font-size: 1.6em;
+		margin-bottom: 10px;
+		border-bottom:1px solid #DADADA;
+		padding-bottom: 8px;
+	}
+	.columns {
+		font-weight: bold;
+		font-size:12px;
+		line-height: 170%;
+	}
+	.columns.selected span {
+		background:#0084af;
+		color:white;
+		border-radius: 5px;
+		padding: 2px 6px;
+	}
+	.columns span {
+		cursor: pointer;
 	}
 }
 div.badge {
@@ -59,10 +87,16 @@ div.highlight {
 	color:white;
 	padding: 20px;
 }
+div#add_skill {
+}
 
 
 div.content {
 	margin:20px;
+}
+p.byline {
+	font-size:12px;
+	font-weight:200;
 }
 
 h1 {

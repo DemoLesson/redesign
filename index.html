@@ -47,6 +47,7 @@
 							<span class="location" data-var="location">Hollywood, CA</span>
 						</div>
 						<div class="seven columns">
+							<a href="#" class="add" data-reveal-id="add_skill" style="font-size:24px">+</a>
 							<div class="badge technology"></div>
 							<div class="badge culture-building"></div>
 							<div class="badge lesson-materials"></div>
@@ -72,7 +73,7 @@
 				<div class="content">
 					<div class="row">
 						<div class="five columns">
-							<h1>Education <a href="#" class="add" data-reveal-id="add-education">+</a></h1>
+							<h1>Education <a href="#" class="add" data-reveal-id="add_education">+</a></h1>
 							<p>Education experience goes here.</p>
 							<h1>Certifications</h1>
 							<p>List of certifications go here.</p>
@@ -86,9 +87,34 @@
 				<!-- END content area -->
 			</div>
 		</div>
+
+
+	<div id="add_skill" class="reveal-modal large">
+		<h1>Choose the skills you have experience in.</h1>
+		<p class="byline">We'll be adding more skills over time, so send us suggestions if you want to see a skill we haven't listed yet.</p>
+
+		<div class="skill-select">
+			<h2>Technology</h2>
+			<div class="row">
+				<div class="columns three" data-skill="12"><span>Skill Name</span></div>
+				<div class="columns three">Another Skill Name</div>
+				<div class="columns three">And Another</div>
+				<div class="columns three">Oh My Goodness</div>
+				<div class="columns three" data-skill="13"><span>Skill Name</span></div>
+				<div class="columns three">Another Skill Name</div>
+				<div class="columns three">And Another</div>
+				<div class="columns three">Oh My Goodness</div>
+				<div class="columns three">Skill Name</div>
+				<div class="columns three">Another Skill Name</div>
+				<div class="columns three">And Another</div>
+				<div class="columns three">Oh My Goodness</div>
+			</div>
+		</div>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
 	</div>
 
-	<div id="add-education" class="reveal-modal">
+	<div id="add_education" class="reveal-modal">
 		<h1>Add Education</h1>
 		<p>Add education form here.</p>
 		<a class="close-reveal-modal">&#215;</a>
@@ -96,11 +122,11 @@
 
 	
 	<!-- Included JS Files (Uncompressed) -->
+	
 	<!--
+	<script src="javascripts/jquery.js"></script>
 	
 	<script src="javascripts/modernizr.foundation.js"></script>
-	
-	<script src="javascripts/jquery.js"></script>
 	
 	<script src="javascripts/jquery.foundation.reveal.js"></script>
 	
@@ -115,5 +141,8 @@
 	
 	<!-- Initialize JS Plugins -->
 	<script src="javascripts/app.js"></script>
+	<script>
+		DemoLesson.hasSkills = [12,11,24]
+	</script>
 </body>
 </html>

@@ -1,9 +1,14 @@
 div.container{background:white;padding:5px;}
 body{background-color:#e5ebee;padding-top:15px;background-image:url(../images/background.png);}
 div.video{border:1px dashed #DADADA;padding:40px;height:258px;background:#ffffff url(../images/video-faded.jpg) no-repeat center center;}
-div.profile{padding:20px;color:#808080;}div.profile h3{font-weight:200;font-size:1.6em;margin:0px;}
+div.profile{padding:0px 20px;color:#808080;}div.profile .columns{margin-top:20px;margin-bottom:20px;}
+div.profile h3{font-weight:200;font-size:1.6em;margin:0px;}
 div.profile img.profile-pic{margin-right:10px;float:left;}
 div.profile div.badge{float:left;margin:0px 10px 0px 0px;}
+div.skill-select h2{font-weight:200;margin:0px;font-size:1.6em;margin-bottom:10px;border-bottom:1px solid #DADADA;padding-bottom:8px;}
+div.skill-select .columns{font-weight:bold;font-size:12px;line-height:170%;}
+div.skill-select .columns.selected span{background:#0084af;color:white;border-radius:5px;padding:2px 6px;}
+div.skill-select .columns span{cursor:pointer;}
 div.badge{height:45px;width:45px;border-radius:45px;background:#3b3b3b url(../images/badges/teacher-leadership.png) no-repeat center center;margin:10px;}div.badge:hover{background-color:#0084af;}
 div.badge.assessment{background-image:url(../images/badges/assessment.png);}
 div.badge.career-development{background-image:url(../images/badges/career-development.png);}
@@ -17,6 +22,7 @@ div.badge.teacher-leadership{background-image:url(../images/badges/teacher-leade
 div.badge.technology{background-image:url(../images/badges/technology.png);}
 div.highlight{margin:10px -10px 30px;background:#585858;color:white;padding:20px;}
 div.content{margin:20px;}
+p.byline{font-size:12px;font-weight:200;}
 h1{font-family:"Exo",Arial,sans-serif;font-weight:200;font-size:24px;color:#b0b0b0;margin:0px 0px 0px 0px;}
 a.add{float:right;margin-top:-4px;font-size:90%;display:block;font-weight:bold;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#3b3b3b;text-decoration:none;}
 a.add:hover{color:#0084af;}
