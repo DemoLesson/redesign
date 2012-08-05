@@ -1,7 +1,7 @@
 div.container {
 	background:white;
 	padding:5px;
-	
+
 }
 body {
 	background-color:#e5ebee;
@@ -26,6 +26,32 @@ div.profile {
 		margin-right:10px;
 		float:left;
 	}
+	div.badge {
+		float:left;
+		margin:0px 10px 0px 0px;
+	}
+}
+div.badge {
+	height:45px;
+	width:45px;
+	border-radius: 45px;
+	background:#3b3b3b url(../images/badges/teacher-leadership.png) no-repeat center center;
+	margin:10px;
+
+	&:hover {
+		background-color:#0084af;
+	}
+
+	&.assessment { background-image:url(../images/badges/assessment.png); }
+	&.career-development { background-image:url(../images/badges/career-development.png); }
+	&.culture-building { background-image:url(../images/badges/culture-building.png); }
+	&.lesson-materials { background-image:url(../images/badges/lesson-materials.png); }
+	&.lesson-plans { background-image:url(../images/badges/lesson-plans.png); }
+	&.life-skills { background-image:url(../images/badges/life-skills.png); }
+	&.pedagogy-themes { background-image:url(../images/badges/pedagogy-themes.png); }
+	&.specialized-training { background-image:url(../images/badges/specialized-training.png); }
+	&.teacher-leadership { background-image:url(../images/badges/teacher-leadership.png); }
+	&.technology { background-image:url(../images/badges/technology.png); }
 }
 div.highlight {
 	margin:10px -10px 30px;
