@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Brian Martinez - the DemoLesson Card</title>
+	
+	<!-- Included CSS Files (Compressed) -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<script src="javascripts/modernizr.foundation.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="row">
+		<div class="twelve columns">
+			<div class="container">
+				<!-- BEGIN video area -->
+				<div class="video">
+					<div class="row">
+						<div class="twelve columns"></div>
+					</div>
+				</div>
+				<!-- END video area -->
+
+
+				<!-- BEGIN profile area -->
+				<div class="profile">
+					<div class="row">
+						<div class="five columns">
+							<img src="images/profile.jpg" class="profile-pic" height="45" width="45" data-var="profile-image" />
+							<h3 data-var="name">David Boskovic</h3>
+							<span class="location" data-var="location">Hollywood, CA</span>
+						</div>
+						<div class="seven columns">
+							badges
+						</div>
+					</div>	
+				</div>			
+				<!-- END profile area -->
+
+				<!-- BEGIN highlight area -->
+				<div class="highlight">
+					<div class="row">
+						<div class="three columns">
+							skill label
+						</div>
+						<div class="nine columns">
+							content
+						</div>
+					</div>	
+				</div>			
+				<!-- END highlight area -->
+
+				<!-- BEGIN content area -->
+				<div class="content">
+					<div class="row">
+						<div class="five columns">
+							<h1>Education <a href="#" class="add" data-reveal-id="add-education">+</a></h1>
+							<p>Education experience goes here.</p>
+							<h1>Certifications</h1>
+							<p>List of certifications go here.</p>
+						</div>
+						<div class="seven columns">
+							<h1>Work Experience</h1>
+							<p>Work experience goes here.</p>
+						</div>
+					</div>	
+				</div>			
+				<!-- END content area -->
+			</div>
+		</div>
+	</div>
+
+	<div id="add-education" class="reveal-modal">
+		<h1>Add Education</h1>
+		<p>Add education form here.</p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+
+	
+	<!-- Included JS Files (Uncompressed) -->
+	<!--
+	
+	<script src="javascripts/modernizr.foundation.js"></script>
+	
+	<script src="javascripts/jquery.js"></script>
+	
+	<script src="javascripts/jquery.foundation.reveal.js"></script>
+	
+	<script src="javascripts/jquery.foundation.buttons.js"></script>
+	
+	<script src="javascripts/jquery.foundation.forms.js"></script>
+	
+	-->
+	
+	<!-- Included JS Files (Compressed) -->
+	<script src="javascripts/foundation.min.js"></script>
+	
+	<!-- Initialize JS Plugins -->
+	<script src="javascripts/app.js"></script>
+</body>
+</html>
