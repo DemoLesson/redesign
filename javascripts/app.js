@@ -72,9 +72,12 @@ var DemoLesson;
 		 * Handle adding a skill for this user.
 		 */
 		this.addSkill = function (skill) {
+			
+			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
+
 			DemoLesson.hasSkills[DemoLesson.hasSkills.length] = skill;
 
-			DemoLesson.getResponse('addSkill', {'skill-id':skill}, function(){
+			DemoLesson.getPostResponse('addSkill', {'user-id':DemoLesson.userID,'skill-id':skill}, function(){
 				alert('success')
 			})
 		}
@@ -83,6 +86,8 @@ var DemoLesson;
 		 * Handle removing a skill from this user.
 		 */
 		this.removeSkill = function (skill) {
+
+			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
 
 			/**
 			 * Remove the skill item from the hasSkills Array.
@@ -94,16 +99,29 @@ var DemoLesson;
 				}
 			}
 
-			DemoLesson.getResponse('removeSkill', {'skill-id':skill}, function(){
+			DemoLesson.getDeleteResponse('removeSkill', {'user-id':DemoLesson.userID,'skill-id':skill}, function(){
 				alert('success')
 			})
 		}
 
 		/**
-		 * A shortcut for getting the response for a specific action.
+		 * A shortcut for getting the response for a POST action.
 		 */
-		this.getResponse = function(url, data, callback) {
-			$.get(DemoLesson.urls[url], data, callback, 'json');
+		this.getPostResponse = function(url, data, callback) {
+			$.post(DemoLesson.urls[url], data, callback, 'json');
+		}
+
+		/**
+		 * A shortcut for getting the response for a DELETE action.
+		 */
+		this.getDeleteResponse = function(url, data, callback) {
+			$.ajax({
+			  url: DemoLesson.urls[url],
+			  type:"DELETE",
+			  data: data,
+			  success: callback,
+			  dataType: 'json'
+			});
 		}
 	}
 	
