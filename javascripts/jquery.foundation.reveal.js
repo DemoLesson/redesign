@@ -202,6 +202,7 @@
         $closeButton
       ;
 
+
       //
       // Do we have a modal background element?
       //
@@ -218,6 +219,9 @@
         // Now, fade it out a bit.
         //
         modalBg.fadeTo( 'fast', 0.8 );
+      } else {
+
+        modalBg.remove().insertAfter( modal );
       }
       
       //

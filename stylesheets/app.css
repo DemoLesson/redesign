@@ -7,8 +7,11 @@ div.profile img.profile-pic{margin-right:10px;float:left;}
 div.profile div.badge{float:left;margin:0px 10px 0px 0px;}
 div.skill-select h2{font-weight:200;margin:0px;font-size:1.6em;margin-bottom:10px;border-bottom:1px solid #DADADA;padding-bottom:8px;}
 div.skill-select .columns{font-weight:bold;font-size:12px;line-height:170%;}
+div.skill-select .columns:last-child{float:left;}
 div.skill-select .columns.selected span{background:#0084af;color:white;border-radius:5px;padding:2px 6px;}
 div.skill-select .columns span{cursor:pointer;}
+.finish-row{padding-top:30px;}
+a.square-button{background:#0084af;color:white;font-size:13px;font-weight:bold;display:block;float:left;padding:6px 20px;margin-top:10px;}
 div.badge{height:45px;width:45px;border-radius:45px;background:#3b3b3b url(../images/badges/teacher-leadership.png) no-repeat center center;margin:10px;}div.badge:hover{background-color:#0084af;}
 div.badge.assessment{background-image:url(../images/badges/assessment.png);}
 div.badge.career-development{background-image:url(../images/badges/career-development.png);}
