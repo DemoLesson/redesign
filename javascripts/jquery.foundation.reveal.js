@@ -54,7 +54,7 @@
            * @type {String}
            * @default fadeAndPop
            */
-          animation: 'fadeAndPop',
+          animation: 'fade',
           /**
            * Speed at which the reveal should show. How fast animtions are.
            *
@@ -221,7 +221,7 @@
         modalBg.fadeTo( 'fast', 0.8 );
       } else {
 
-        modalBg.remove().insertAfter( modal );
+        //modalBg.remove().insertAfter( modal );
       }
       
       //
@@ -643,6 +643,8 @@
             modal.trigger( 'reveal:closed' );
           
           } // end if not animating
+
+          modalQueued = false;
 
         } // end if !locked
       

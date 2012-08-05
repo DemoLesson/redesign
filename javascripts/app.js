@@ -65,14 +65,16 @@ var DemoLesson;
 			'addEducation' : '',
 			'addWorkExperience' : '',
 			'addCertification' : '',
-			'unlockCard' : ''
+			'unlockCard' : '',
+			'fetchBadges' : ''
 		}
 
 		/**
 		 * Handle adding a skill for this user.
+		 * @expects {'status':'success|failure'}
 		 */
 		this.addSkill = function (skill) {
-			
+
 			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
 
 			DemoLesson.hasSkills[DemoLesson.hasSkills.length] = skill;
@@ -84,6 +86,7 @@ var DemoLesson;
 
 		/**
 		 * Handle removing a skill from this user.
+		 * @expects {'status':'success|failure'}
 		 */
 		this.removeSkill = function (skill) {
 
@@ -103,6 +106,29 @@ var DemoLesson;
 				alert('success')
 			})
 		}
+
+
+
+		/**
+		 * Handle fetching a badge for this user.
+		 * @expects ['badge-category','other-badge-category']
+		 */
+		this.fetchBadges = function () {
+
+			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
+
+			DemoLesson.getResponse('fetchBadges', {'user-id':DemoLesson.userID}, function(){
+				alert('success')
+			})
+		}
+
+		/**
+		 * A shortcut for getting the response for a GET action.
+		 */
+		this.getResponse = function(url, data, callback) {
+			$.get(DemoLesson.urls[url], data, callback, 'json');
+		}
+
 
 		/**
 		 * A shortcut for getting the response for a POST action.
