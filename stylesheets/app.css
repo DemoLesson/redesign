@@ -35,3 +35,4 @@ a.add{float:right;margin-top:-4px;font-size:90%;display:block;font-weight:bold;f
 a.add:hover{color:#0084af;}
 .reveal-modal-bg{background-color:#000;}
 .reveal-modal{padding:20px;}.reveal-modal .close-reveal-modal{top:15px;right:15px;}
+label{margin-top:10px;}

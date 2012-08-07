@@ -163,6 +163,25 @@
 		<h1>Add Education</h1>
 		<p>Add education form here.</p>
 		<a class="close-reveal-modal">&#215;</a>
+
+		<form action="/Other/DemoLessonCard/test.php" method="post" id="add-school">
+			<input type="text" value="School/University" name="school" />
+			<input type="text" value="Degree" name="degree" />
+			<input type="text" value="Major" name="major" />
+
+			<label>Start Year</label>
+			<select>
+				<option>2010</option>
+				<option>2011</option>
+			</select>
+			<label>End Year</label>
+			<select>
+				<option>2010</option>
+				<option>2011</option>
+			</select>
+			<label><input type="checkbox" value="" name="attending" /> I am currently attending here.</label>
+			<label><input type="submit" value="Add Education" /></label>
+		</form>
 	</div>
 
 	<div id="skill_thanks" class="reveal-modal">

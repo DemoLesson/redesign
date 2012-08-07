@@ -49,6 +49,16 @@ var DemoLesson;
 			$("div[data-skill="+DemoLesson.hasSkills[i]+"]").addClass('selected')
 		}	
 
+
+		/**
+		 * Process Forms.
+		 */
+		 $("form#add-school").submit(function() {
+		 	DemoLesson.getPostResponse('addEducation', $(this).serialize(), function(data) {
+		 		console.log(data)
+		 	});
+		 	return false;
+		 })
 	});
 
 
@@ -71,7 +81,7 @@ var DemoLesson;
 		this.urls = {
 			'addSkill' : '',
 			'removeSkill' : '',
-			'addEducation' : '',
+			'addEducation' : 'test.php',
 			'addWorkExperience' : '',
 			'addCertification' : '',
 			'unlockCard' : '',
