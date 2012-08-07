@@ -116,8 +116,8 @@
 						<div class="five columns">
 							<h1>Education <a href="#" class="add" data-reveal-id="add_education">+</a></h1>
 							<p>Education experience goes here.</p>
-							<h1>Certifications</h1>
-							<p>List of certifications go here.</p>
+							<h1>Credentials <a href="#" class="add" data-reveal-id="add_certification">+</a></h1>
+							<p>List of credentials go here.</p>
 						</div>
 						<div class="seven columns">
 							<h1>Work Experience <a href="#" class="add" data-reveal-id="add_work_experience">+</a></h1>
@@ -183,7 +183,7 @@
 		<p>Description here.</p>
 		<a class="close-reveal-modal">&#215;</a>
 
-		<form action="#" method="post" id="add-school">
+		<form action="#" method="post" id="add-work-experience">
 			<input type="text" value="Company, District or School" name="school" />
 			<input type="text" value="Position" name="degree" />
 			<input type="text" value="Start Date" name="major" />
@@ -198,19 +198,35 @@
 	</div>
 
 	<div id="add_certification" class="reveal-modal">
-		<h1>Add Certifications</h1>
+		<h1>Add Credential</h1>
 		<p>Description here.</p>
 		<a class="close-reveal-modal">&#215;</a>
 
-		<form action="#" method="post" id="add-school">
-			<input type="text" value="School/University" name="school" />
-			<input type="text" value="Degree" name="degree" />
-			<input type="text" value="Major" name="major" />
-			<input type="text" value="Start Year" name="major" />
-			<input type="text" value="End Year" name="major" />
-
-			
-			<label><input type="checkbox" value="" name="attending" /> I am currently working here.</label>
+		<form action="#" method="post" id="add-certification">
+			<input type="text" value="Subject Area" name="subject" />
+			<input type="text" value="Issuer (Ex. USC)" name="issuer" />
+			<label>Credential Type</label>
+			<select id="credential_credentialType" name="credential[credentialType]">
+				<option value=""></option>
+				<option value="Certificated - Teacher - 1-3">Certificated - Teacher - 1-3</option>
+				<option value="Certificated - Teacher - 4-6">Certificated - Teacher - 4-6</option>
+				<option value="Certificated - Teacher - Adult Education">Certificated - Teacher - Adult Education</option>
+				<option value="Certificated - Teacher - Children's Center">Certificated - Teacher - Children's Center</option>
+				<option value="Certificated - Teacher - Court/Community/Alt.">Certificated - Teacher - Court/Community/Alt.</option>
+				<option value="Certificated - Teacher - Head Start">Certificated - Teacher - Head Start</option>
+				<option value="Certificated - Teacher - High School">Certificated - Teacher - High School</option>
+				<option value="Certificated - Teacher - K-6">Certificated - Teacher - K-6</option>
+				<option value="Certificated - Teacher - Kindergarten">Certificated - Teacher - Kindergarten</option>
+				<option value="Certificated - Teacher - Library Media">Certificated - Teacher - Library Media</option>
+				<option value="Certificated - Teacher - Middle Grades">Certificated - Teacher - Middle Grades</option>
+				<option value="Certificated - Teacher - Middle/High">Certificated - Teacher - Middle/High</option>
+				<option value="Certificated - Teacher - Other">Certificated - Teacher - Other</option>
+				<option value="Certificated - Teacher - Pre K">Certificated - Teacher - Pre K</option>
+				<option value="Certificated - Teacher - ROP">Certificated - Teacher - ROP</option>
+				<option value="Certificated - Teacher - Special Education">Certificated - Teacher - Special Education</option>
+				<option value="Credential in Progress">Credential in Progress</option>
+				<option value="Emergency Credential">Emergency Credential</option>
+			</select>
 			<label><input type="submit" value="Add Education" /></label>
 		</form>
 	</div>

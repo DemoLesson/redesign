@@ -70,6 +70,16 @@ var DemoLesson;
 		 	});
 		 	return false;
 		 })
+
+		/**
+		 * Process Forms.
+		 */
+		 $("form#add-certification").submit(function() {
+		 	DemoLesson.getPostResponse('addCertification', $(this).serialize(), function(data) {
+		 		console.log(data)
+		 	});
+		 	return false;
+		 })
 	});
 
 
