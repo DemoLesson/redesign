@@ -59,6 +59,17 @@ var DemoLesson;
 		 	});
 		 	return false;
 		 })
+
+
+		/**
+		 * Process Forms.
+		 */
+		 $("form#add-work-experience").submit(function() {
+		 	DemoLesson.getPostResponse('addWorkExperience', $(this).serialize(), function(data) {
+		 		console.log(data)
+		 	});
+		 	return false;
+		 })
 	});
 
 
