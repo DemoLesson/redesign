@@ -69,10 +69,6 @@ var DemoLesson;
 	 */
 	DemoLesson = new function() {
 
-		/**
-		 * This is populated with the user ID once unlockCard has been called or if it's been loaded from the url.
-		 */
-		this.userID = false;
 		this.hasSkills = [];
 
 		/**
@@ -94,11 +90,10 @@ var DemoLesson;
 		 */
 		this.addSkill = function (skill) {
 
-			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
 
 			DemoLesson.hasSkills[DemoLesson.hasSkills.length] = skill;
 
-			DemoLesson.getPostResponse('addSkill', {'user-id':DemoLesson.userID,'skill-id':skill}, function(){
+			DemoLesson.getPostResponse('addSkill', {'skill-id':skill}, function(){
 				alert('success')
 			})
 		}
@@ -109,7 +104,6 @@ var DemoLesson;
 		 */
 		this.removeSkill = function (skill) {
 
-			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
 
 			/**
 			 * Remove the skill item from the hasSkills Array.
@@ -121,7 +115,7 @@ var DemoLesson;
 				}
 			}
 
-			DemoLesson.getDeleteResponse('removeSkill', {'user-id':DemoLesson.userID,'skill-id':skill}, function(){
+			DemoLesson.getDeleteResponse('removeSkill', {'skill-id':skill}, function(){
 				alert('success')
 			})
 		}
@@ -134,9 +128,8 @@ var DemoLesson;
 		 */
 		this.fetchBadges = function () {
 
-			if(!DemoLesson.userID) alert('DemoLesson.userID must be set.');
 
-			DemoLesson.getResponse('fetchBadges', {'user-id':DemoLesson.userID}, function(){
+			DemoLesson.getResponse('fetchBadges', {}, function(){
 				alert('success')
 			})
 		}
