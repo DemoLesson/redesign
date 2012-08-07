@@ -12,7 +12,10 @@ div.skill-select .columns.selected span{background:#0084af;color:white;border-ra
 div.skill-select .columns span{cursor:pointer;}
 .finish-row{padding-top:30px;}
 a.square-button{background:#0084af;color:white;font-size:13px;font-weight:bold;display:block;float:left;padding:6px 20px;margin-top:10px;}
-div.badge{height:45px;width:45px;border-radius:45px;background:#3b3b3b url(../images/badges/teacher-leadership.png) no-repeat center center;margin:10px;}div.badge:hover{background-color:#0084af;}
+div.skill-detail{display:none;}
+div.badge{height:45px;width:45px;border-radius:45px;background:#3b3b3b url(../images/badges/teacher-leadership.png) no-repeat center center;margin:10px;position:relative;}div.badge em{display:none;background-image:url(../images/up-arrow.png);position:absolute;height:8px;width:16px;bottom:-20px;left:30%;}
+div.badge:hover em{display:block;}
+div.badge:hover{background-color:#0084af;}
 div.badge.assessment{background-image:url(../images/badges/assessment.png);}
 div.badge.career-development{background-image:url(../images/badges/career-development.png);}
 div.badge.culture-building{background-image:url(../images/badges/culture-building.png);}
@@ -23,7 +26,8 @@ div.badge.pedagogy-themes{background-image:url(../images/badges/pedagogy-themes.
 div.badge.specialized-training{background-image:url(../images/badges/specialized-training.png);}
 div.badge.teacher-leadership{background-image:url(../images/badges/teacher-leadership.png);}
 div.badge.technology{background-image:url(../images/badges/technology.png);}
-div.highlight{margin:10px -10px 30px;background:#585858;color:white;padding:20px;}
+div.highlight{margin:0px -10px 30px;background:#585858;color:white;padding:20px;padding-bottom:5px;}div.highlight div.quotable p{font-family:Georgia;margin-right:30px;}
+div.highlight ol{margin-left:20px;margin-top:8px;}div.highlight ol li{font-size:12px;font-weight:bold;line-height:130%;}
 div.content{margin:20px;}
 p.byline{font-size:12px;font-weight:200;}
 h1{font-family:"Exo",Arial,sans-serif;font-weight:200;font-size:24px;color:#b0b0b0;margin:0px 0px 0px 0px;}

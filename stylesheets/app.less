@@ -75,12 +75,28 @@ a.square-button {
 	padding:6px 20px;
 	margin-top:10px;
 }
+div.skill-detail {
+	display:none;
+}
 div.badge {
 	height:45px;
 	width:45px;
 	border-radius: 45px;
 	background:#3b3b3b url(../images/badges/teacher-leadership.png) no-repeat center center;
 	margin:10px;
+	position: relative;
+	em {
+		display: none;
+		background-image:url(../images/up-arrow.png);
+		position: absolute;
+		height:8px;
+		width:16px;
+		bottom:-20px;
+		left:30%;
+	}
+	&:hover em {
+		display: block;
+	}
 
 	&:hover {
 		background-color:#0084af;
@@ -98,10 +114,27 @@ div.badge {
 	&.technology { background-image:url(../images/badges/technology.png); }
 }
 div.highlight {
-	margin:10px -10px 30px;
+	margin:0px -10px 30px;
 	background:#585858;
 	color:white;
 	padding: 20px;
+	padding-bottom: 5px;
+
+
+	div.quotable p { 
+		font-family:Georgia;
+		margin-right:30px;
+
+	}
+	ol {
+		margin-left: 20px;
+		margin-top: 8px;
+		li {
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 130%;
+		}
+	}
 }
 div#add_skill {
 }

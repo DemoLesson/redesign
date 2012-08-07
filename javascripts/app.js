@@ -33,6 +33,15 @@ var DemoLesson;
 			return false;
 		})
 
+		$(".badge").hover(function(){
+			$(".highlight .row > div").hide()
+
+			$("#skill-"+$(this).data('skillgroup')).show()
+		},function(){
+			$("#skill-"+$(this).data('skillgroup')).hide()
+			$("#bio").show();
+		})
+
 		/**
 		 * Mark selected skills as available.
 		 */
