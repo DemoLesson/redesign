@@ -1,13 +1,13 @@
 var DemoLesson;
 
-(function($){  
+(function($){
 
 	/**
 	 * Initialize some Foundation Elements we need.
 	 */
 	$(function(){
 		$(document).foundationButtons();
-		$(document).foundationCustomForms();		
+		$(document).foundationCustomForms();
 	});
 
 
@@ -47,7 +47,7 @@ var DemoLesson;
 		 */
 		for(i=0;i<DemoLesson.hasSkills.length;i++) {
 			$("div[data-skill="+DemoLesson.hasSkills[i]+"]").addClass('selected')
-		}	
+		}
 
 
 		/**
@@ -91,6 +91,7 @@ var DemoLesson;
 	DemoLesson = new function() {
 
 		this.hasSkills = [];
+		this.userID = false;
 
 		/**
 		 * Configure this with the specific handlers for each action.
@@ -103,6 +104,14 @@ var DemoLesson;
 			'addCertification' : '',
 			'unlockCard' : '',
 			'fetchBadges' : ''
+		}
+
+		/**
+		 * Initialize the demolesson object.
+		 */
+		this.init = function() {
+			if(this.userID)
+				alert('UserID not loaded with page, nothing will work.')
 		}
 
 		/**
@@ -149,7 +158,6 @@ var DemoLesson;
 		 */
 		this.fetchBadges = function () {
 
-
 			DemoLesson.getResponse('fetchBadges', {}, function(){
 				alert('success')
 			})
@@ -183,7 +191,7 @@ var DemoLesson;
 			});
 		}
 	}
-	
+
 })(jQuery);
 
 
